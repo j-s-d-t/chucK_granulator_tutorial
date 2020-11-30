@@ -9,7 +9,7 @@ SndBuf envbuf;
 //You will need to change the path.
 //Just drag the actual soundfile to this document
 //and it will present the path.
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_gauss.aif" => envbuf.read;
+"grainEnv/gEnv_gauss.aif" => envbuf.read;
 Gain g => dac; //set up an audio chain
 SinOsc a => g; //send a sine wave to g for demo purposes
 envbuf => g; //send our envelope buffer to g

@@ -6,21 +6,21 @@ SndBuf bufs[maxGr];
 SndBuf envs[maxGr]; 
 
 string samples [4];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/samples/004_glassbreak.wav" => samples[0];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/samples/000_tanpura.wav" => samples[1];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/samples/001_musicbox.aif" => samples[2];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/samples/018_low-glass-bow_stereo.aif" => samples[3];
+"samples/004_glassbreak.wav" => samples[0];
+"samples/000_tanpura.wav" => samples[1];
+"samples/001_musicbox.aif" => samples[2];
+"samples/018_low-glass-bow_stereo.aif" => samples[3];
 string envelopes [10];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_blackman.aif" => envelopes[0];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_expodec.aif" => envelopes[1];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_gauss.aif" => envelopes[2];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_hamming.aif" => envelopes[3];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_hanning.aif" => envelopes[4];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_pulse.aif" => envelopes[5];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_quasiGauss.aif" => envelopes[6];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_rexpodec.aif" => envelopes[7];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_threeStageLinear.aif" => envelopes[8];
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_tri.aif" => envelopes[9];
+"grainEnv/gEnv_blackman.aif" => envelopes[0];
+"grainEnv/gEnv_expodec.aif" => envelopes[1];
+"grainEnv/gEnv_gauss.aif" => envelopes[2];
+"grainEnv/gEnv_hamming.aif" => envelopes[3];
+"grainEnv/gEnv_hanning.aif" => envelopes[4];
+"grainEnv/gEnv_pulse.aif" => envelopes[5];
+"grainEnv/gEnv_quasiGauss.aif" => envelopes[6];
+"grainEnv/gEnv_rexpodec.aif" => envelopes[7];
+"grainEnv/gEnv_threeStageLinear.aif" => envelopes[8];
+"grainEnv/gEnv_tri.aif" => envelopes[9];
 
 //Use ugens to create variables that will change over time
 

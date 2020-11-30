@@ -7,7 +7,7 @@
 //Example: http://chuck.cs.princeton.edu/doc/examples/basic/sndbuf.ck
 SndBuf buf;
 //Read a soundfile into the buffer
-"/Users/yangj14/Documents/chucK/samples/004_glassbreak.wav" => buf.read;
+"samples/004_glassbreak.wav" => buf.read;
 //This is the basic patch: the buffer is chucked to the dac
 buf => dac;
 //These are functions within the SndBuf ugen. 

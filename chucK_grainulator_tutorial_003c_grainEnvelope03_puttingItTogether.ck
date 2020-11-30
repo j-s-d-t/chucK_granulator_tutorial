@@ -8,9 +8,9 @@
 repeat(10)
 {
     SndBuf buf; //source soundfile to buffer
-    "/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/samples/004_glassbreak.wav" => buf.read;
+    "samples/004_glassbreak.wav" => buf.read;
     SndBuf envbuf; //envelope soundfile to buffer
-    "/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_gauss.aif" => envbuf.read;
+    "grainEnv/gEnv_gauss.aif" => envbuf.read;
     Gain g => dac; //set up an audio chain
     buf => g; //send source to g
     envbuf => g; //send our envelope buffer to g

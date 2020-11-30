@@ -27,7 +27,7 @@ while( true )
             
             if( msg.ascii == 81 )
             {
-                Machine.add( "/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/sampleCloud1a.ck" ) =>  id[0]; 
+                Machine.add( "sampleCloud1a.ck" ) =>  id[0]; 
             }
             
             if( msg.ascii == 87 )
@@ -37,7 +37,7 @@ while( true )
             
             if( msg.ascii == 69 )
             {
-                Machine.add( "/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/sampleCloud1a.ck" ) =>  id[0]; 
+                Machine.add( "sampleCloud1a.ck" ) =>  id[0]; 
             }
             
         }

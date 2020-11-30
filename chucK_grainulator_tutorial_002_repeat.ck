@@ -4,14 +4,14 @@
 //Same as tutorial 001 but repeating a loop
 //sounding more like a granulator
 SndBuf buf;
-"/Users/yangj14/Documents/chucK/samples/004_glassbreak.wav" => buf.read;
+"samples/004_glassbreak.wav" => buf.read;
+
 buf => dac;
 
-repeat(20)
-{
-0 => buf.pos; //where in the buffer we sample
-1 => buf.rate; //speed of playback
-200::ms => now; //grain duration
+repeat (20) {
+    0 => buf.pos; //where in the buffer we sample
+    1 => buf.rate; //speed of playback
+    200::ms => now; //grain duration
 }
 
 //We already can adjust:

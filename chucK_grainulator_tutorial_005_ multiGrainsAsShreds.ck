@@ -10,8 +10,8 @@ repeat (30)
 {        
     //We fill the buffers, within the repeat loop, 
     //just before creating the grain.
-    "/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/samples/001_musicbox.aif" => buf.read;
-    "/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_gauss.aif" => envbuf.read;
+    "samples/001_musicbox.aif" => buf.read;
+    "grainEnv/gEnv_gauss.aif" => envbuf.read;
     
     spork ~ grain( buf, envbuf, 0, grainDur );
     

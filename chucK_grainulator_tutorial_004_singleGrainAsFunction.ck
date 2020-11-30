@@ -5,9 +5,9 @@
 
 
 SndBuf buf1;
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/samples/004_glassbreak.wav" => buf1.read;
+"samples/004_glassbreak.wav" => buf1.read;
 SndBuf envbuf1;
-"/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_gauss.aif" => envbuf1.read;
+"grainEnv/gEnv_gauss.aif" => envbuf1.read;
 
 //Declare Function
 fun void grain( SndBuf buf, SndBuf envbuf, int pos, float rate, int gdur )

@@ -13,7 +13,7 @@ while ( true )
         tog1.getFloat() $ int => playtog;
         if( playtog == 1 )
         {
-            Machine.add( "/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/sampleCloud1a.ck" ) =>  id[0]; 
+            Machine.add( "sampleCloud1a.ck" ) =>  id[0]; 
         }
         else
         {

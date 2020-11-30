@@ -20,8 +20,8 @@ while (true) //infinite loop
     {  
         
         //read to unique buffer for each grain up to maxGr
-        "/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/samples/000_tanpura.wav" => bufs[i].read;
-        "/Users/yangj14/Documents/GitHub/chucK_granulator_tutorial/grainEnv/gEnv_gauss.aif" => envs[i].read;
+        "samples/000_tanpura.wav" => bufs[i].read;
+        "grainEnv/gEnv_gauss.aif" => envs[i].read;
         
         spork ~ grain( bufs[i], envs[i], 0, grainDur );
         
