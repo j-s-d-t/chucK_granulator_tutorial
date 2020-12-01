@@ -5,7 +5,7 @@
 //Here we will choose a source soundfile,
 //an envelope soundfile,
 //and multiple them together to create a sound grain
-repeat(10)
+repeat(20)
 {
     SndBuf buf; //source soundfile to buffer
     "samples/004_glassbreak.wav" => buf.read;
@@ -18,7 +18,7 @@ repeat(10)
     0 => buf.pos; //starting playback position of source
     1 => buf.rate; //speed of the source playback
     0 => envbuf.pos; //start the envelope playback at sample 0
-    700 => int gdur; //grain dur
+    50 => int gdur; //grain dur
     (envbuf.length() / (ms*gdur)) => envbuf.rate; //calculate rate to read through grain envelope to make grain last the grain dur
     gdur::ms => now; //move time ahead for single grain duration
 }

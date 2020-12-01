@@ -3,10 +3,14 @@
 //CODE: //https://github.com/elosine/chucK_granulator_tutorial
 
 100 => int grainDur;
-80 => int grainGap;
+20 => int grainGap;
 SndBuf buf, envbuf;
 
-repeat (30)
+300 => int repeats;
+
+(repeats * grainGap) => int playdur;
+
+repeat (repeats)
 {        
     //We fill the buffers, within the repeat loop, 
     //just before creating the grain.
@@ -19,7 +23,7 @@ repeat (30)
     
 }
 
-1::day => now;
+playdur::ms => now;
 
 
 fun void grain( SndBuf buf, SndBuf envbuf, int pos, int gdur )

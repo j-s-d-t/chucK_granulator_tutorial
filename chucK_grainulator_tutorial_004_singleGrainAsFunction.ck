@@ -28,13 +28,7 @@ fun void grain( SndBuf buf, SndBuf envbuf, int pos, float rate, int gdur )
 }
 
 
-spork ~ grain( buf1, envbuf1, 0, 1000 ); //run the grain function on its own shred
+spork ~ grain( buf1, envbuf1, 0, 1.0, 100 ); //run the grain function on its own shred
 //See: http://chuck.cs.princeton.edu/doc/language/spork.html
 
 1::day => now;
-
-
-
-
-
-

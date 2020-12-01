@@ -34,6 +34,7 @@ envbuf => g; //send our envelope buffer to g
 //And the variable gdur will be the desired length of the grain in milliseconds
 700 => int gdur;
  (envbuf.length() / (ms*gdur)) => envbuf.rate;
+
  1::day => now; //move time
 
 

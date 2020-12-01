@@ -11,8 +11,10 @@ SndBuf bufs[maxGr]; //array to store all of the sample buffers
 SndBuf envs[maxGr]; //array to store all of the envelope buffers
 0 => int ix; //an indexer to count through the buffers
 
-800 => int grainDur;
-100 => int grainGap;
+20 => int grainDur;
+110 => int grainGap;
+
+24500 => int positon;
 
 while (true) //infinite loop
 {      
@@ -22,15 +24,16 @@ while (true) //infinite loop
         //read to unique buffer for each grain up to maxGr
         "samples/000_tanpura.wav" => bufs[i].read;
         "grainEnv/gEnv_gauss.aif" => envs[i].read;
+
+        (Math.random2( 0, 200 ) + positon) => int newpos;
         
-        spork ~ grain( bufs[i], envs[i], 0, grainDur );
+        spork ~ grain( bufs[i], envs[i], newpos, grainDur );
         
         grainGap::ms => now; //this is the space between grains
         
     }
     
-    15::ms => now; //frame rate
-    
+    1::samp => now; //frame rate
 }
 
 
@@ -38,14 +41,14 @@ while (true) //infinite loop
 fun void grain( SndBuf buf, SndBuf envbuf, int pos, int gdur )
 {  
     Gain g;
-    1 => g.gain;
+    0.5 => g.gain;
     g => dac;
     buf => g;
     envbuf => g;
     3 => g.op;
     
     pos => buf.pos;
-    1 => buf.rate;
+    0.4 => buf.rate;
     1 => buf.loop;
     0 => envbuf.pos;
     (envbuf.length() / (ms*gdur)) => envbuf.rate; 
